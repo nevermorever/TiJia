@@ -5,7 +5,7 @@ import com.zyjd.tijia.activity.device_manage.DeviceManageActivity;
 // 全局常量
 public class Constant {
     public static final boolean DEBUG = true;
-    public static final String API_BASE_URL = "http://192.168.2.2:9000/api/";
+    public static final String API_BASE_URL = "http://192.168.0.21:8000/api/";
 
     public static final int REQUEST_FOR_SCAN = 413;
 

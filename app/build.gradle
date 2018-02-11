@@ -77,4 +77,6 @@ dependencies {
     // ijkplayer 封装
     compile 'cn.jzvd:jiaozivideoplayer:6.2.7'
 
+    // websocket-client
+    compile 'com.neovisionaries:nv-websocket-client:2.3'
 }
