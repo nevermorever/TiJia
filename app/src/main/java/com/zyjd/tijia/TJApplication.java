@@ -19,7 +19,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
-import com.zyjd.tijia.activity.video_call.CallReceiver;
+import com.zyjd.tijia.activity.call.CallReceiver;
 
 import java.util.Iterator;
 import java.util.List;

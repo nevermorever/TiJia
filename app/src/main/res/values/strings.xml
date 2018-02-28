@@ -124,6 +124,18 @@
     <string name="list_title_station">当前楼层:</string>
     <string name="list_title_door_status">轿门状态:</string>
     <string name="title_video_monitor">视频监控</string>
+    <string name="list_title_have_ppl">是否有人:</string>
+    <string name="list_title_fault_type">故障类型:</string>
+    <string name="list_title_car_temp_hum">温 湿度:</string>
+    <string name="list_title_door_lock">门锁回路:</string>
+    <string name="list_title_run_status">运行状态:</string>
+    <string name="list_title_elevator_lock">是否锁梯:</string>
+    <string name="list_title_is_overload">是否超载:</string>
+    <string name="list_title_system_power">系统电源:</string>
+    <string name="list_title_flat_floor_status">平层状态:</string>
+    <string name="list_title_brake_status">抱闸状态:</string>
+    <string name="list_title_operation_mode">操作模式:</string>
+    <string name="list_title_safety_circuit">安全回路:</string>
 
 
 </resources>

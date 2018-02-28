@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zyjd.tijia.activity.device_manage.FaultRecordDetailActivity">
+    tools:context="com.zyjd.tijia.activity.device.FaultRecordDetailActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

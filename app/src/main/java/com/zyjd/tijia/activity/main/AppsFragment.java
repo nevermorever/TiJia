@@ -9,12 +9,12 @@ import com.youth.banner.Banner;
 import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
 import com.zyjd.tijia.R;
-import com.zyjd.tijia.activity.VideoMonitorActivity;
-import com.zyjd.tijia.activity.device_manage.DeviceManageActivity;
+import com.zyjd.tijia.activity.device.DeviceManageActivity;
 import com.zyjd.tijia.activity.duty_and_inspection.DutyAndInspectionManageActivity;
 import com.zyjd.tijia.activity.maintenance.MaintenancePlanActivity;
-import com.zyjd.tijia.activity.realtime_monitor.RealtimeMonitorActivity;
-import com.zyjd.tijia.activity.video_call.TerminalListActivity;
+import com.zyjd.tijia.activity.monitor.RealtimeDataMonitorActivity;
+import com.zyjd.tijia.activity.test.TestDynamicLayoutActivity;
+import com.zyjd.tijia.activity.call.TerminalListActivity;
 import com.zyjd.tijia.base.BaseFragment;
 import com.zyjd.tijia.util.ToastUtil;
 
@@ -141,11 +141,11 @@ public class AppsFragment extends BaseFragment {
 
     @OnClick(R.id.ll_realtime_monitor)
     void onRealtimeMonitorClick() {
-        startActivity(new Intent(getActivity(), RealtimeMonitorActivity.class));
+        startActivity(new Intent(getActivity(), RealtimeDataMonitorActivity.class));
     }
 
     @OnClick(R.id.ll_more)
     void onMoreClick() {
-        startActivity(new Intent(getActivity(), VideoMonitorActivity.class));
+        startActivity(new Intent(getActivity(), TestDynamicLayoutActivity.class));
     }
 }

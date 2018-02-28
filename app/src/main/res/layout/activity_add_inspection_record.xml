@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zyjd.tijia.activity.device_manage.AddInspectionRecordActivity">
+    tools:context="com.zyjd.tijia.activity.device.AddInspectionRecordActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/AppTheme.Toolbar">

@@ -15,7 +15,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.zyjd.tijia.R;
-import com.zyjd.tijia.activity.device_manage.AddOnDutyRecordActivity;
+import com.zyjd.tijia.activity.device.AddOnDutyRecordActivity;
 import com.zyjd.tijia.api.ApiClient;
 import com.zyjd.tijia.base.ToolbarActivity;
 import com.zyjd.tijia.entity.CallRecord;

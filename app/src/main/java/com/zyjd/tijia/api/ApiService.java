@@ -129,7 +129,7 @@ public interface ApiService {
     Observable<PaginatedResult<Elevator>> getElevatorList(@QueryMap Map<String, Object> map);
 
     @GET("elevators/realtime/")
-    Observable<PaginationedResult<ElevatorRealtimeData>> getElevatorRealtimeDataList(@QueryMap Map<String, Object> map);
+    Observable<PaginatedResult<ElevatorRealtimeData>> getElevatorRealtimeDataList(@QueryMap Map<String, Object> map);
 
     @POST("elevators/")
     Observable<Elevator> addElevator(@Body Elevator elevator);

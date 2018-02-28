@@ -59,30 +59,30 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/ThemeLogin" />
-        <activity android:name=".activity.device_manage.DeviceManageActivity" />
+        <activity android:name=".activity.device.DeviceManageActivity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.main.CaptureActivity" />
         <activity android:name=".activity.me.AboutActivity" />
         <activity android:name=".activity.me.ToturialActivity" />
         <activity android:name=".activity.me.ProfileActivity" />
         <activity android:name=".activity.me.SettingActivity" />
-        <activity android:name=".activity.device_manage.RepairRecordActivity" />
-        <activity android:name=".activity.device_manage.AddRepairRecordActivity" />
-        <activity android:name=".activity.device_manage.MaintainRecordActivity" />
-        <activity android:name=".activity.device_manage.FaultRecordActivity" />
+        <activity android:name=".activity.device.RepairRecordActivity" />
+        <activity android:name=".activity.device.AddRepairRecordActivity" />
+        <activity android:name=".activity.device.MaintainRecordActivity" />
+        <activity android:name=".activity.device.FaultRecordActivity" />
         <activity android:name=".activity.duty_and_inspection.InspectionRecordActivity" />
         <activity android:name=".activity.duty_and_inspection.CallRecordActivity" />
-        <activity android:name=".activity.device_manage.AddFaultRecordActivity" />
-        <activity android:name=".activity.device_manage.AddInspectionRecordActivity" />
-        <activity android:name=".activity.device_manage.AddOnDutyRecordActivity" />
-        <activity android:name=".activity.device_manage.ElevatorListActivity" />
-        <activity android:name=".activity.device_manage.ElevatorDetailActivity" />
+        <activity android:name=".activity.device.AddFaultRecordActivity" />
+        <activity android:name=".activity.device.AddInspectionRecordActivity" />
+        <activity android:name=".activity.device.AddOnDutyRecordActivity" />
+        <activity android:name=".activity.device.ElevatorListActivity" />
+        <activity android:name=".activity.device.ElevatorDetailActivity" />
         <activity android:name=".activity.RepairRecordDetailActivity" />
-        <activity android:name=".activity.device_manage.RepairRecordDetailActivity" />
-        <activity android:name=".activity.device_manage.FaultRecordDetailActivity" />
-        <activity android:name=".activity.device_manage.EvaluationActivity" />
+        <activity android:name=".activity.device.RepairRecordDetailActivity" />
+        <activity android:name=".activity.device.FaultRecordDetailActivity" />
+        <activity android:name=".activity.device.EvaluationActivity" />
         <activity
-            android:name=".activity.video_call.VideoCallActivity"
+            android:name=".activity.call.VideoCallActivity"
             android:theme="@style/ThemeLogin" />
 
         <!-- 设置环信应用的 appkey 换成自己的 -->
@@ -109,9 +109,10 @@
 
         <activity android:name=".activity.duty_and_inspection.DutyAndInspectionManageActivity" />
         <activity android:name=".activity.maintenance.MaintenancePlanActivity" />
-        <activity android:name=".activity.video_call.TerminalListActivity" />
-        <activity android:name=".activity.realtime_monitor.RealtimeMonitorActivity" />
-        <activity android:name=".activity.VideoMonitorActivity"></activity>
+        <activity android:name=".activity.call.TerminalListActivity" />
+        <activity android:name=".activity.monitor.RealtimeDataMonitorActivity" />
+        <activity android:name=".activity.VideoMonitorActivity" />
+        <activity android:name=".activity.test.TestDynamicLayoutActivity"></activity>
     </application>
 
 </manifest>

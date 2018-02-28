@@ -14,6 +14,7 @@ import com.zyjd.tijia.R;
 import com.zyjd.tijia.activity.SearchActivity;
 import com.zyjd.tijia.adapter.FragmentViewPagerAdapter;
 import com.zyjd.tijia.base.ToolbarActivity;
+import com.zyjd.tijia.websocket.WsManager;
 
 import butterknife.BindView;
 

@@ -95,6 +95,7 @@ public class ElevatorRealtimeData {
         private String elevatorLock;
         private String faultCode;
         private String station;
+        private String floor;
         private String isOverload;
         private String carHum;
         private String sysPower;
@@ -186,7 +187,13 @@ public class ElevatorRealtimeData {
             this.station = station;
         }
 
+        public String getFloor() {
+            return floor;
+        }
 
+        public void setFloor(String floor) {
+            this.floor = floor;
+        }
 
         public String getCarHum() {
             return carHum;

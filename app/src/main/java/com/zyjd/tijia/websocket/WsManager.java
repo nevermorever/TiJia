@@ -18,7 +18,7 @@ public class WsManager {
     private static final int FRAME_QUEUE_SIZE = 5;
     private static final int CONNECT_TIMEOUT = 5000;
 
-    public static WsManager instance;
+    private static WsManager instance;
     private WsListener listener;
     private WebSocket ws;
     private WsStatus status;
@@ -38,13 +38,13 @@ public class WsManager {
     }
 
     // 初始化websocket
-    public void initWebsocket() {
+    public void initWebsocket(WebSocketAdapter webSocketAdapter) {
         try {
             ws = new WebSocketFactory()
                     .createSocket(Constant.WS_REALTIME_DATA_URL)
                     .setFrameQueueSize(FRAME_QUEUE_SIZE)            // 设置帧队列最大值为5
                     .setMissingCloseFrameAllowed(false)             // 设置不允许服务端关闭连接却未发送关闭帧
-                    .addListener(listener = new WsListener())       // 添加回调监听
+                    .addListener(webSocketAdapter)       // 添加回调监听
                     .connectAsynchronously();                       // 异步连接
 
             setStatus(WsStatus.CONNECTING);
@@ -54,9 +54,8 @@ public class WsManager {
         }
     }
 
-
     // 监听
-    private class WsListener extends WebSocketAdapter {
+    public class WsListener extends WebSocketAdapter {
         @Override
         public void onTextMessage(WebSocket websocket, String text) throws Exception {
             super.onTextMessage(websocket, text);
@@ -87,11 +86,11 @@ public class WsManager {
         }
     }
 
-    private void setStatus(WsStatus status) {
+    public void setStatus(WsStatus status) {
         this.status = status;
     }
 
-    private WsStatus getStatus() {
+    public WsStatus getStatus() {
         return status;
     }
 
@@ -101,7 +100,7 @@ public class WsManager {
     }
 
     // 连接状态
-    private enum WsStatus {
+    public enum WsStatus {
         CONNECTED,          // 连接成功
         CONNECT_ERROR,      // 连接失败
         CONNECTING;         // 正在连接

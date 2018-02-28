@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.zyjd.tijia.R;
-import com.zyjd.tijia.activity.device_manage.AddInspectionRecordActivity;
+import com.zyjd.tijia.activity.device.AddInspectionRecordActivity;
 import com.zyjd.tijia.base.ToolbarActivity;
 
 import butterknife.BindView;
