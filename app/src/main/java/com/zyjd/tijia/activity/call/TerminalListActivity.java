@@ -51,7 +51,7 @@ public class TerminalListActivity extends ToolbarActivity implements BaseQuickAd
     }
 
     private void getTerminalList() {
-        ApiClient.getApiService()
+        ApiClient.getApiService(this)
                 .getTerminalList(new HashMap<String, Object>())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())

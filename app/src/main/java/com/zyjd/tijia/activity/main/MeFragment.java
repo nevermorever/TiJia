@@ -9,6 +9,7 @@ import com.zyjd.tijia.activity.me.AboutActivity;
 import com.zyjd.tijia.activity.me.ProfileActivity;
 import com.zyjd.tijia.activity.me.SettingActivity;
 import com.zyjd.tijia.base.BaseFragment;
+import com.zyjd.tijia.util.SPUtil;
 import com.zyjd.tijia.util.ToastUtil;
 
 import butterknife.OnClick;
@@ -47,6 +48,8 @@ public class MeFragment extends BaseFragment {
 
     @OnClick(R.id.tv_logout)
     void onLogoutClick(View view) {
+        SPUtil.putString(getContext(), "token", null);
         startActivity(new Intent(getActivity(), LoginActivity.class));
     }
+
 }

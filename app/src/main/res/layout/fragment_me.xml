@@ -18,7 +18,7 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:src="@mipmap/splash" />
+            android:src="@mipmap/logo" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -250,8 +250,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/list_item_bg_white"
-        android:focusable="true"
-        android:clickable="true">
+        android:clickable="true"
+        android:focusable="true">
 
         <ImageView
             android:id="@+id/iv_setting_icon"
@@ -295,8 +295,8 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/list_item_bg_white"
-        android:focusable="true"
-        android:clickable="true">
+        android:clickable="true"
+        android:focusable="true">
 
         <ImageView
             android:id="@+id/iv_about_icon"

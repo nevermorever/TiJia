@@ -1,5 +1,9 @@
 package com.zyjd.tijia.api;
 
+import android.content.Context;
+
+import com.zyjd.tijia.util.SPUtil;
+
 import java.io.IOException;
 
 import okhttp3.Interceptor;
@@ -8,15 +12,17 @@ import okhttp3.Response;
 
 
 public class RequestInterceptor implements Interceptor {
-    private String token;
-    public RequestInterceptor(String token){
-        this.token = token;
+    private Context context;
+
+    public RequestInterceptor(Context context) {
+        this.context = context;
     }
+
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request original = chain.request();
         Request request = original.newBuilder()
-                .header("Authorization","token "+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMtMTE3NSIsInVzZXJfaWQiOjEsImVtYWlsIjoiNzk4OTE0NjgyQHFxLmNvbSIsImV4cCI6MTUxODY4MDA2NH0.4WVqy5nlhzQ5Rz2rYLkgsiW5Ab0KbX_emiZXvoSrySY")
+                .header("Authorization", "token " + SPUtil.getString(context, "token", null))
                 .header("Accept", "application/json")
                 .method(original.method(), original.body())
                 .build();

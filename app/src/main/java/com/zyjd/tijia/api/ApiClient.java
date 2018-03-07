@@ -1,6 +1,8 @@
 package com.zyjd.tijia.api;
 
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 import com.zyjd.tijia.Constant;
 
@@ -21,13 +23,13 @@ public class ApiClient {
     private static Converter.Factory gsonConverterFactory = GsonConverterFactory.create(new Gson());
     private static CallAdapter.Factory rxJavaCallAdapterFactory = RxJava2CallAdapterFactory.create();
 
-    public static ApiService getApiService() {
+    public static ApiService getApiService(Context context) {
         if (apiService == null) {
             if (Constant.DEBUG) {
                 builder.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
             }
             builder.addInterceptor(new ResponseInterceptor());
-            builder.addInterceptor(new RequestInterceptor(""));
+            builder.addInterceptor(new RequestInterceptor(context));
             builder.connectTimeout(15, TimeUnit.SECONDS);
             builder.readTimeout(20, TimeUnit.SECONDS);
             builder.writeTimeout(20, TimeUnit.SECONDS);

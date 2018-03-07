@@ -77,7 +77,7 @@ public class RepairRecordActivity extends ToolbarActivity implements OnRefreshLi
 
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
-        ApiClient.getApiService()
+        ApiClient.getApiService(this)
                 .getRepairRecordList(new HashMap<String, Object>() {
                     {
                         put("page", 1);
@@ -119,7 +119,7 @@ public class RepairRecordActivity extends ToolbarActivity implements OnRefreshLi
             refresher.finishLoadmoreWithNoMoreData();
         } else {
 
-            ApiClient.getApiService()
+            ApiClient.getApiService(this)
                     .getRepairRecordList(new HashMap<String, Object>() {
                         {
                             put("page", current + 1);

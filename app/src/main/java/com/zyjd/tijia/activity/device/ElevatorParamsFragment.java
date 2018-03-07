@@ -59,7 +59,7 @@ public class ElevatorParamsFragment extends BaseFragment {
     protected void initData() {
         super.initData();
         ApiClient
-                .getApiService()
+                .getApiService(getContext())
                 .getElevatorById(elevatorId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

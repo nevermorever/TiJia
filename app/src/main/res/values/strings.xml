@@ -136,6 +136,8 @@
     <string name="list_title_brake_status">抱闸状态:</string>
     <string name="list_title_operation_mode">操作模式:</string>
     <string name="list_title_safety_circuit">安全回路:</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
 
 
 </resources>

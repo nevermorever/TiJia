@@ -61,7 +61,7 @@ public class ToBeEvaluatedFaultRecordFragment extends BaseFragment implements On
 
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
-        ApiClient.getApiService()
+        ApiClient.getApiService(getContext())
                 .getFaultRecordList(new HashMap<String, Object>() {
                     {
                         put("page", 1);
@@ -104,7 +104,7 @@ public class ToBeEvaluatedFaultRecordFragment extends BaseFragment implements On
         if (null == next) {
             refresher.finishLoadmoreWithNoMoreData();
         } else {
-            ApiClient.getApiService()
+            ApiClient.getApiService(getContext())
                     .getFaultRecordList(new HashMap<String, Object>() {
                         {
                             put("page", current + 1);

@@ -67,7 +67,7 @@ public class ElevatorRepairRecordFragment extends BaseFragment implements OnRefr
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
         ApiClient
-                .getApiService()
+                .getApiService(getContext())
                 .getRepairRecordList(new HashMap<String, Object>() {{
                     put("page", 1);
                     put("limit", 10);
@@ -111,7 +111,7 @@ public class ElevatorRepairRecordFragment extends BaseFragment implements OnRefr
             refresher.finishLoadmoreWithNoMoreData();
         } else {
             ApiClient
-                    .getApiService()
+                    .getApiService(getContext())
                     .getRepairRecordList(new HashMap<String, Object>() {
                         {
                             put("page", current + 1);

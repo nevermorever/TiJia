@@ -66,6 +66,7 @@ public class MainActivity extends ToolbarActivity
         adapter.addFragment(new AppsFragment());
         adapter.addFragment(new MeFragment());
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(2);
         viewPager.setCurrentItem(1);
     }
 

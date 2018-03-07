@@ -25,13 +25,15 @@ public class SplashActivity extends BaseActivity {
         super.initWidget();
         startActivity(new Intent(SplashActivity.this, MainActivity.class));
         finish();
-//        verifyUserToken();
+
+        // 校验用户token是否有效
+        verifyUserToken();
 //        getBannerResource();
     }
 
     private void verifyUserToken() {
         Token token = new Token(SPUtil.getString(this, "token", null));
-        ApiClient.getApiService()
+        ApiClient.getApiService(this)
                 .verifyToken(token)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
@@ -44,7 +46,7 @@ public class SplashActivity extends BaseActivity {
 
                     @Override
                     public void onError(Throwable e) {
-                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
                         finish();
                     }
 

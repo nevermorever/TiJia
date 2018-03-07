@@ -55,7 +55,7 @@ public class ElevatorListActivity extends ToolbarActivity implements BaseQuickAd
 
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
-        ApiClient.getApiService()
+        ApiClient.getApiService(this)
                 .getElevatorList(new HashMap<String, Object>() {{
                     put("page", 1);
                     put("limit", 10);
@@ -90,7 +90,7 @@ public class ElevatorListActivity extends ToolbarActivity implements BaseQuickAd
         if (next == null) {
             refresher.finishLoadmoreWithNoMoreData();
         } else {
-            ApiClient.getApiService()
+            ApiClient.getApiService(this)
                     .getElevatorList(new HashMap<String, Object>() {{
                         put("page", current + 1);
                         put("limit", 10);

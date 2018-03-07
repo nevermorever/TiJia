@@ -91,7 +91,7 @@ public class MaintenancePlanActivity extends ToolbarActivity {
 
     // 获取15天之内的维保计划
     private void getPlansDate() {
-        ApiClient.getApiService()
+        ApiClient.getApiService(this)
                 .getMaintenancePlanDateList(new HashMap<String, Object>())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
@@ -134,7 +134,7 @@ public class MaintenancePlanActivity extends ToolbarActivity {
 //                        Date date = fmt.parse(currentDate.toString())
 
                         // 选中日期，请求当天数据渲染
-                        ApiClient.getApiService()
+                        ApiClient.getApiService(MaintenancePlanActivity.this)
                                 .getMaintenancePlanList(new HashMap<String, Object>())
                                 .subscribeOn(Schedulers.io())
                                 .observeOn(AndroidSchedulers.mainThread())

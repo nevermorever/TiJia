@@ -59,7 +59,7 @@ public class UnhandleFaultRecordFragment extends BaseFragment implements OnRefre
 
     @Override
     public void onRefresh(RefreshLayout refreshlayout) {
-        ApiClient.getApiService()
+        ApiClient.getApiService(getContext())
                 .getFaultRecordList(new HashMap<String, Object>() {
                     {
                         put("page", 1);
@@ -103,7 +103,7 @@ public class UnhandleFaultRecordFragment extends BaseFragment implements OnRefre
         if (null == next) {
             refresher.finishLoadmoreWithNoMoreData();
         } else {
-            ApiClient.getApiService()
+            ApiClient.getApiService(getContext())
                     .getFaultRecordList(new HashMap<String, Object>() {
                         {
                             put("page", current + 1);

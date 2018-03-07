@@ -5,7 +5,7 @@ import com.zyjd.tijia.activity.device.DeviceManageActivity;
 // 全局常量
 public class Constant {
     public static final boolean DEBUG = true;
-    public static final String API_BASE_URL = "http://192.168.0.14:8000/api/";
+    public static final String API_BASE_URL = "http://192.168.1.3:8000/api/";
     public static final String WS_REALTIME_DATA_URL = "ws://192.168.0.14:8000/realtime-data/";
     public static final int REQUEST_FOR_SCAN = 413;
 
